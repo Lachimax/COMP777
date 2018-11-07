@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 from astropy import wcs
 from astropy.coordinates import SkyCoord
 from astropy.io import fits
-from functions import *
 
 data_dir = "..//data//"
 
