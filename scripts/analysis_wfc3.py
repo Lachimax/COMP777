@@ -89,9 +89,9 @@ print('Number of Stars:', len(data))
 
 # Cut any stars outside of the CMD region of interest (Main Sequence Turnoff and subgiant branch).
 print('Excluding stars outside CMD region of interest')
-data = data[data[:, 15] - data[:, 28] < B_I_max]
-data = data[data[:, 15] - data[:, 28] > B_I_min]
-data = data[data[:, 15] < B_max]
+#data = data[data[:, 15] - data[:, 28] < B_I_max]
+#data = data[data[:, 15] - data[:, 28] > B_I_min]
+#data = data[data[:, 15] < B_max]
 print('Number of Stars:', len(data))
 
 print()
