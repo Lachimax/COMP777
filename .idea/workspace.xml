@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01ac843f-4c17-45f7-ba52-7588768a0b87" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/analysis.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/analysis_wfc3.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/dolphot_extract.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/dolphot_extract.py" afterPath="$PROJECT_DIR$/scripts/dolphot_extract.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,13 +20,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="dolphot_extract.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scripts/dolphot_extract.py">
+      <file leaf-file-name="analysis_wfc3.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/analysis_wfc3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="157" column="19" lean-forward="true" selection-start-line="157" selection-start-column="19" selection-end-line="157" selection-end-column="19" />
+            <state relative-caret-position="227">
+              <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding>
-                <element signature="e#32#50#0" expanded="true" />
+                <element signature="e#33#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,7 +69,16 @@
       <find>size</find>
       <find>print</find>
       <find>Stars: '</find>
+      <find>.ara</find>
+      <find>5.</find>
+      <find>&amp;</find>
+      <find>j</find>
+      <find>[2, 1]</find>
     </findStrings>
+    <replaceStrings>
+      <replace>4</replace>
+      <replace>[1, 2]</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,7 +91,9 @@
         <option value="$PROJECT_DIR$/gaia_rave_analysis.py" />
         <option value="$PROJECT_DIR$/scripts/gaia_extraction.py" />
         <option value="$PROJECT_DIR$/scripts/dolphot_extract_2.py" />
+        <option value="$PROJECT_DIR$/analysis.py" />
         <option value="$PROJECT_DIR$/scripts/dolphot_extract.py" />
+        <option value="$PROJECT_DIR$/scripts/analysis_wfc3.py" />
       </list>
     </option>
   </component>
@@ -206,7 +219,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="COMP777" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/dolphot_extract.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Lachlan\Git\COMP777\scripts\analysis_wfc3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -223,7 +236,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="COMP777" />
-      <option name="SCRIPT_NAME" value="C:\Users\Lachlan\Git\COMP777\scripts\dolphot_extract.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Lachlan\Git\COMP777\scripts\analysis_wfc3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -393,15 +406,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="67" width="3226" height="1746" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.107731305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.107731305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3183079" sideWeight="0.50253487" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33148405" sideWeight="0.49746513" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3335645" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3183079" sideWeight="0.49746513" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3148405" sideWeight="0.40145755" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33146462" sideWeight="0.49226806" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294036" sideWeight="0.49873257" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33707076" sideWeight="0.48002577" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3148405" sideWeight="0.59854245" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -417,17 +430,20 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/dolphot_extract.py">
+    <entry file="file://$PROJECT_DIR$/scripts/analysis_wfc3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#32#50#0" expanded="true" />
+            <element signature="e#33#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -448,12 +464,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/dolphot_extract.py">
+    <entry file="file://$PROJECT_DIR$/scripts/analysis_wfc3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#32#50#0" expanded="true" />
+            <element signature="e#33#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -474,12 +490,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/dolphot_extract.py">
+    <entry file="file://$PROJECT_DIR$/scripts/analysis_wfc3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#32#50#0" expanded="true" />
+            <element signature="e#33#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -502,70 +518,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gaia_rave_analysis.py" />
     <entry file="file://$PROJECT_DIR$/scripts/gaia_extract.py" />
-    <entry file="file://$PROJECT_DIR$/scripts/dolphot_extract.py">
+    <entry file="file://$PROJECT_DIR$/scripts/analysis_wfc3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="e#32#50#0" expanded="true" />
+            <element signature="e#33#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/dolphot_extract.py">
+    <entry file="file://$PROJECT_DIR$/scripts/analysis_wfc3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#32#50#0" expanded="true" />
+            <element signature="e#33#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gaia_rave_analysis.py" />
     <entry file="file://$PROJECT_DIR$/scripts/gaia_extract.py" />
-    <entry file="file://$PROJECT_DIR$/scripts/dolphot_extract.py">
+    <entry file="file://$PROJECT_DIR$/scripts/analysis_wfc3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#32#50#0" expanded="true" />
+            <element signature="e#33#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gaia_rave_analysis.py" />
     <entry file="file://$PROJECT_DIR$/scripts/gaia_extract.py" />
-    <entry file="file://$PROJECT_DIR$/scripts/dolphot_extract.py">
+    <entry file="file://$PROJECT_DIR$/scripts/analysis_wfc3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#32#50#0" expanded="true" />
+            <element signature="e#33#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gaia_rave_analysis.py" />
     <entry file="file://$PROJECT_DIR$/scripts/gaia_extract.py" />
-    <entry file="file://$PROJECT_DIR$/scripts/dolphot_extract.py">
+    <entry file="file://$PROJECT_DIR$/scripts/analysis_wfc3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2376">
           <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding>
-            <element signature="e#32#50#0" expanded="true" />
+            <element signature="e#33#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gaia_rave_analysis.py" />
     <entry file="file://$PROJECT_DIR$/scripts/gaia_extract.py" />
-    <entry file="file://$PROJECT_DIR$/scripts/dolphot_extract.py">
+    <entry file="file://$PROJECT_DIR$/scripts/analysis_wfc3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#32#50#0" expanded="true" />
+            <element signature="e#33#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -574,21 +590,13 @@
     <entry file="file://$PROJECT_DIR$/scripts/gaia_extract.py" />
     <entry file="file://$PROJECT_DIR$/gaia_rave_analysis.py" />
     <entry file="file://$PROJECT_DIR$/gaia_rave_analysis.py" />
-    <entry file="file://$PROJECT_DIR$/scripts/dolphot_extract.py">
+    <entry file="file://$PROJECT_DIR$/scripts/analysis_wfc3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="e#32#50#0" expanded="true" />
+            <element signature="e#33#51#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/wfc3_attempt_2.columns">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -602,13 +610,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/gaia_extract.py" />
     <entry file="file://$PROJECT_DIR$/functions.py" />
-    <entry file="file://$PROJECT_DIR$/scripts/dolphot_extract.py">
+    <entry file="file://$PROJECT_DIR$/data/wfc3_attempt_2.columns">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="157" column="19" lean-forward="true" selection-start-line="157" selection-start-column="19" selection-end-line="157" selection-end-column="19" />
+        <state relative-caret-position="462">
+          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/analysis_wfc3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding>
-            <element signature="e#32#50#0" expanded="true" />
+            <element signature="e#33#51#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
