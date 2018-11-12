@@ -57,11 +57,11 @@ def draw_sgb_box(ax):
 
 
 def draw_isochrones():
-    plt.plot(B_I_iso_min, B_iso_min, c='purple')
-    plt.plot(B_I_iso_max, B_iso_max, c='violet')
-    plt.plot(B_I_138, B_138, c='blue')
-    plt.plot(B_I_218, B_218, c='red')
-    plt.plot(B_I_best, B_best, c='green')
+    plt.plot(B_I_iso_min, B_iso_min, c='purple', label='1 Gyrs')
+    plt.plot(B_I_iso_max, B_iso_max, c='violet', label='3.09 Gyrs')
+    plt.plot(B_I_138, B_138, c='blue', label='1.38 Gyrs')
+    plt.plot(B_I_218, B_218, c='red', label='2.18 Gyrs')
+    plt.plot(B_I_best, B_best, c='green', label='1.58 Gyrs')
 
 
 def draw_all_isochrones():
@@ -78,7 +78,7 @@ def mse(yy, y_dash):
 
 # Distance modulus (correction for absolute madnitudes, which are the values we have in the isochrone data, to apparent
 # magnitudes, the values in the DOLPHOT data) to the SMC
-DM = 19.05
+DM = 19.35
 
 B_I_offset = 0.14
 # B_I_offset = 0
@@ -275,12 +275,12 @@ print('Plotting')
 # Pixel Coordinates, showing cluster centre
 fig1 = plt.figure()
 ax1 = fig1.add_subplot(111)
+ax1.set_title('Star Pixel Coordinates')
 ax1.scatter(x_pix, y_pix, c='black', marker=',', s=1)
 ax1.scatter(x_pix[in_cluster], y_pix[in_cluster], c='blue', marker=',', s=1)
 ax1.scatter(centre_x_pix, centre_y_pix, c='green')
 ax1.axis('equal')
 ax1.set_title('')
-ax1.set_title('1. Star Pixel Coordinates')
 ax1.set_xlabel('x (pixels)')
 ax1.set_ylabel('y (pixels)')
 plt.show()
@@ -288,18 +288,20 @@ plt.show()
 # Equatorial Coordinates, showing cluster centre
 fig2 = plt.figure()
 ax2 = fig2.add_subplot(111)
+ax2.set_title('Star Equatorial Coordinates')
 ax2.scatter(ra, dec, c='black', marker=',', s=1)
 ax2.scatter(centre_ra, centre_dec, c='green')
 # ax2.set_xlim(left, right)
 # ax2.set_ylim(bottom, top)
 # ax2.axis('equal')
-ax2.set_title('2. Star Equatorial Coordinates')
 ax2.set_xlabel('Right Ascension (deg)')
 ax2.set_ylabel('Declination (deg)')
 plt.show(fig2)
 
 # Histogram of angular distance from cluster centre
-plt.title('3. Angular Distance from Cluster Centre')
+plt.title('Angular Distance from Cluster Centre')
+plt.xlabel('Angle x (arcseconds)')
+plt.ylabel('Angle y (arcsecs)')
 plt.hist(dist)
 plt.show()
 
@@ -308,13 +310,13 @@ plt.show()
 fig4 = plt.figure()
 ax4 = fig4.add_subplot(111)
 ax4.axis('equal')
+ax4.set_title('Equatorial Coordinates of Stars')
 ax4.scatter(ra, dec, c='black', marker=',', s=1)
 ax4.scatter(ra[in_cluster], dec[in_cluster], c='blue', marker=',', s=1)
 ax4.scatter(ra[in_cluster_equ], dec[in_cluster_equ], c='red', marker=',', s=1)
 ax4.scatter(centre_ra, centre_dec, c='green')
 ax4.set_xlim(left, right)
 ax4.set_ylim(bottom, top)
-ax4.set_title('4. Equatorial Coordinates of Stars')
 ax4.set_xlabel('Right Ascension (deg)')
 ax4.set_ylabel('Declination (deg)')
 plt.show(fig4)
@@ -324,6 +326,7 @@ plt.show(fig4)
 fig5 = plt.figure()
 ax5 = fig5.add_subplot(111)
 ax5.axis('equal')
+ax5.set_title('Image Coordinates of Stars')
 ax5.scatter(x, y, c='black', marker=',', s=1)
 ax5.scatter(x[in_cluster], y[in_cluster], c='blue', marker=',', s=1)
 ax5.scatter(x[in_cluster_equ], y[in_cluster_equ], c='red', marker=',', s=1)
@@ -331,7 +334,6 @@ ax5.scatter(centre_x, centre_y, c='green')
 ax5.set_title('')
 # ax5.set_xlim(left, right)
 # ax5.set_ylim(bottom, top)
-ax5.set_title('5. Image Coordinates of Stars')
 ax5.set_xlabel('x (arcsec)')
 ax5.set_ylabel('y (arcsec)')
 plt.show(fig5)
@@ -342,7 +344,7 @@ plt.show(fig5)
 
 fig1 = plt.figure()
 ax1 = fig1.add_subplot(111)
-ax1.set_title('1. Unprocessed Colour-Magnitude Diagram for stars in image')
+ax1.set_title('Unprocessed Colour-Magnitude Diagram for stars in image')
 ax1.scatter(B_I, B, c='black', marker=',', s=1)
 ax1.set_xlim(0, 2)
 ax1.set_ylim(23, 18)
@@ -352,7 +354,7 @@ plt.show()
 
 # HR Diagram limited to cluster stars
 
-plt.title('2. Colour-Magnitude Diagram for stars < 50 arcsec from cluster centre')
+plt.title('Colour-Magnitude Diagram for stars < 50 arcsec from cluster centre')
 plt.scatter(B_I[in_cluster], B[in_cluster], c='black', marker=',', s=1)
 plt.xlim(0, 2)
 plt.ylim(23, 18)
@@ -362,7 +364,7 @@ plt.show()
 
 # HR Diagram with stars labelled not in cluster
 
-plt.title('3. Colour-Magnitude Diagram for stars > 50 arcsec from cluster centre')
+plt.title('Colour-Magnitude Diagram for stars > 50 arcsec from cluster centre')
 plt.scatter(B_I[in_cluster == False], B[in_cluster == False], c='black', marker=',', s=1)
 plt.xlim(0, 2)
 plt.ylim(23, 18)
@@ -373,9 +375,9 @@ plt.show()
 # Demonstration of Decontamination Technique
 
 fig7, ax7 = plt.subplots(2, 2)
+ax7[0, 0].set_title('Background CMD, with y <= 800')
 draw_cells(ax7[0, 0])
 ax7[0, 0].scatter(B_I[field4], B[field4], c='black', marker=',', s=1)
-ax7[0, 0].set_title('Background CMD, with y <= 800')
 ax7[0, 0].set_xlabel('B - I Colour Index')
 ax7[0, 0].set_ylabel('B magnitude')
 ax7[0, 0].set_xlim(0, 2)
@@ -500,6 +502,7 @@ plt.show()
 
 # Show isochrones
 
+plt.title('Colour-Magnitude Diagram with isochrones')
 plt.scatter(B_I[in_cluster & (remove3 == False)], B[in_cluster & (remove3 == False)], c='black', marker=',', s=1)
 plt.scatter(B_I[select_sgb], B[select_sgb], c='violet',
             marker=',', label='SGB stars')
@@ -507,14 +510,19 @@ draw_isochrones()
 draw_sgb_box(plt)
 plt.xlim(0.1, 1.5)
 plt.ylim(22.5, 19.5)
+plt.xlabel('B - I Colour Index')
+plt.ylabel('B magnitude')
 plt.legend()
 plt.show()
 
+plt.title('Colour-Magnitude Diagram with isochrones')
+plt.xlabel('B - I Colour Index')
+plt.ylabel('B magnitude')
 plt.scatter(B_I[in_cluster & (remove3 == False)], B[in_cluster & (remove3 == False)], c='black', marker=',', s=1)
-plt.scatter(B_I[select_sgb], B[select_sgb], c='violet',
-            marker=',', label='SGB stars')
 draw_all_isochrones()
 draw_sgb_box(plt)
+plt.scatter(B_I[select_sgb], B[select_sgb], c='violet',
+            marker=',', label='SGB stars')
 plt.xlim(0.1, 1.5)
 plt.ylim(22.5, 19.5)
 plt.legend()
@@ -522,8 +530,10 @@ plt.show()
 
 # Plot MSEs of isochrones
 
+plt.title("Mean Squared Error of Isochrones to the Subgiant Branch")
 plt.plot(ages, mses)
 plt.xlabel('Age')
-plt.ylabel('Mean Sqared Error')
+plt.ylabel('Mean Squared Error')
 plt.show()
+
 print('Optimum age:', ages[mses.argmin()])
