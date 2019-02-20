@@ -68,6 +68,7 @@ def draw_all_isochrones():
     for iso in iso_list:
         plt.plot(iso[:, 29] - iso[:, 34] + B_I_offset, iso[:, 29] + DM)
 
+
 def get_nearest(xx, arr):
     return np.abs(xx - arr).argmin()
 
@@ -130,9 +131,9 @@ print('Number of Stars:', len(data))
 
 # Cut any stars outside of the CMD region of interest (Main Sequence Turnoff and subgiant branch).
 print('Excluding stars outside CMD region of interest')
-data = data[data[:, 15] - data[:, 28] < B_I_max]
-data = data[data[:, 15] - data[:, 28] > B_I_min]
-data = data[data[:, 15] < B_max]
+# data = data[data[:, 15] - data[:, 28] < B_I_max]
+# data = data[data[:, 15] - data[:, 28] > B_I_min]
+# data = data[data[:, 15] < B_max]
 print('Number of Stars:', len(data))
 
 print()
@@ -277,12 +278,14 @@ fig1 = plt.figure()
 ax1 = fig1.add_subplot(111)
 ax1.set_title('Star Pixel Coordinates')
 ax1.scatter(x_pix, y_pix, c='black', marker=',', s=1)
-ax1.scatter(x_pix[in_cluster], y_pix[in_cluster], c='blue', marker=',', s=1)
-ax1.scatter(centre_x_pix, centre_y_pix, c='green')
+# ax1.scatter(x_pix[in_cluster], y_pix[in_cluster], c='blue', marker=',', s=1)
+# ax1.scatter(centre_x_pix, centre_y_pix, c='green')
 ax1.axis('equal')
 ax1.set_title('')
 ax1.set_xlabel('x (pixels)')
 ax1.set_ylabel('y (pixels)')
+ax1.set_xlim(0, 4000)
+ax1.set_ylim(0, 4500)
 plt.show()
 
 # Equatorial Coordinates, showing cluster centre
@@ -302,7 +305,7 @@ plt.show(fig2)
 plt.title('Angular Distance from Cluster Centre')
 plt.xlabel('Angle x (arcseconds)')
 plt.ylabel('Angle y (arcsecs)')
-plt.hist(dist)
+plt.hist(dist, bins=50)
 plt.show()
 
 # Plot of both cluster determination methods (pixel and WCS coordinates), in equatorial coordinates
@@ -329,9 +332,8 @@ ax5.axis('equal')
 ax5.set_title('Image Coordinates of Stars')
 ax5.scatter(x, y, c='black', marker=',', s=1)
 ax5.scatter(x[in_cluster], y[in_cluster], c='blue', marker=',', s=1)
-ax5.scatter(x[in_cluster_equ], y[in_cluster_equ], c='red', marker=',', s=1)
+# ax5.scatter(x[in_cluster_equ], y[in_cluster_equ], c='red', marker=',', s=1)
 ax5.scatter(centre_x, centre_y, c='green')
-ax5.set_title('')
 # ax5.set_xlim(left, right)
 # ax5.set_ylim(bottom, top)
 ax5.set_xlabel('x (arcsec)')
@@ -354,7 +356,7 @@ plt.show()
 
 # HR Diagram limited to cluster stars
 
-plt.title('Colour-Magnitude Diagram for stars < 50 arcsec from cluster centre')
+plt.title('Cluster CMD Before Statistical Subtraction')
 plt.scatter(B_I[in_cluster], B[in_cluster], c='black', marker=',', s=1)
 plt.xlim(0, 2)
 plt.ylim(23, 18)
@@ -364,7 +366,7 @@ plt.show()
 
 # HR Diagram with stars labelled not in cluster
 
-plt.title('Colour-Magnitude Diagram for stars > 50 arcsec from cluster centre')
+plt.title('Background Star Colour-Magnitude Diagram')
 plt.scatter(B_I[in_cluster == False], B[in_cluster == False], c='black', marker=',', s=1)
 plt.xlim(0, 2)
 plt.ylim(23, 18)
@@ -485,7 +487,7 @@ ax8[0, 3].set_xlim(0, 2)
 ax8[0, 3].set_ylim(23, 18)
 draw_sgb_box(ax8[0, 3])
 
-ax8[1, 3].scatter(B_I[field3], B[field3], c='black', marker=',', s=1)
+ax8[1, 3].scatter(B_I[field4], B[field4], c='black', marker=',', s=1)
 ax8[1, 3].set_xlabel('B - I Colour Index')
 ax8[1, 3].set_ylabel('B magnitude')
 ax8[1, 3].set_xlim(0, 2)
@@ -537,3 +539,6 @@ plt.ylabel('Mean Squared Error')
 plt.show()
 
 print('Optimum age:', ages[mses.argmin()])
+print(len(ages))
+print(min(ages))
+print(max(ages))
